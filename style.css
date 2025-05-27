@@ -18,10 +18,33 @@ header, section, footer {
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
 }
 
+header {
+  text-align: center;
+}
+
 h1, h2 {
   font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
-  color: #ff6666;
-  text-shadow: 2px 2px 8px #fff176, 0 0 2px #fff;
+  /* Remove the color property below to allow .tiedye-text to show */
+  /* color: #ff6666; */
+}
+
+.tiedye-text {
+  background: linear-gradient(
+    to right,
+    #ff0000 0%,   /* red */
+    #ff7f00 20%,  /* orange */
+    #ffff00 40%,  /* yellow */
+    #00ff00 60%,  /* green */
+    #0000ff 80%,  /* blue */
+    #8b00ff 100%  /* violet */
+  );
+  background-size: 200% 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 1px 1px 2px #222;
 }
 
 a {
