@@ -76,14 +76,15 @@ footer {
 .about-images-row {
   display: flex; /* changed from inline-flex to flex */
   gap: 7.2rem;
-  justify-content: right;
+  justify-content: space-between; /* changed from flex-start to space-between */
   margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
 
 .about-images-row img {
-  width: 140px;
-  height: 140px;
+  width: 100%;
+  max-width: 170px; 
+  height: auto;
   object-fit: cover;
   border-radius: 16px;
   box-shadow: 0 2px 8px #0002;
@@ -116,7 +117,7 @@ footer {
   }
   .about-images-row img {
     width: 90vw;
-    max-width: 220px;
+    max-width: 140px;
     height: auto;
     display: block;
     margin-left: auto;
