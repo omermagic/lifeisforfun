@@ -44,15 +44,88 @@ footer {
   margin-bottom: 0;
 }
 
-@media (max-width: 1000px) {
-  header, section, footer {
-    max-width: 95vw;
-  }
+#gallery {
+  margin-top: 2rem;
+  text-align: center;
 }
 
-@media (max-width: 700px) {
-  header, section, footer {
-    padding: 1rem;
-    max-width: 95vw;
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.image-gallery img {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: #fff;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.06) rotate(-2deg);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+}
+
+.about-images-row {
+  display: flex; /* changed from inline-flex to flex */
+  gap: 7.2rem;
+  justify-content: right;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-images-row img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px #0002;
+  background: #fff;
+  flex-shrink: 0; /* prevent shrinking */
+}
+
+/* Removed this block:
+.about-images-row img:first-child {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+*/
+
+/* Only this class rotates the */
+.about-rotated-img {
+  transform: rotate(90deg);
+  transform-origin: center center;
+}
+
+@media (max-width: 600px) {
+  .about-images-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem; /* set gap to 3rem on mobile */
+  }
+  .about-images-row img {
+    width: 90vw;
+    max-width: 220px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about-rotated-img {
+    /* Ensure rotated image is centered */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
 }
