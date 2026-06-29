@@ -1,67 +1,311 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Life is for Fun: a personal motto, creative operating system, and invitation to build a more joyful life.">
   <title>Life is for Fun</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="images/lifeisforfun.ico" type="image/x-icon">
-
+  <link rel="preload" as="image" href="images/20240310_112533.jpg">
 </head>
 <body>
-  <header>
-    <img src="images/20240310_112533.jpg" alt="Jump high" style="width:140px;height:140px;border-radius:50%;box-shadow:0 2px 8px #0002;display:block;margin:0 auto 1.5rem auto;">
-    <h1 class="tiedye-text">Life is for Fun</h1>
-    <p>Adventures. Thoughts. Ideas.</p>
-    <video muted controls style="width:100%;max-width:800px;display:block;margin:1.5rem auto;">
-      <source src="Music_Video_Creation_Life_is_For_Fun -2 .mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <noscript></noscript> <!-- Hide video if unsupported -->
+  <a class="skip-link" href="#motto">Skip to motto</a>
+
+  <header class="site-hero" id="top">
+    <canvas class="signal-canvas" id="signal-canvas" aria-hidden="true"></canvas>
+
+    <nav class="topbar" aria-label="Primary navigation">
+      <a class="brand-mark" href="#top" aria-label="Life is for Fun home">
+        <span class="brand-chip">LIFF</span>
+        <span>Life is for Fun</span>
+      </a>
+      <div class="nav-links">
+        <a href="#motto">Motto</a>
+        <a href="#system">System</a>
+        <a href="#motion">Motion</a>
+        <a href="#field-log">Field Log</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">Personal operating system // tie-dye joy protocol</p>
+      <h1><span>Life is</span> <span>for Fun</span></h1>
+      <p class="hero-copy">
+        A motto for using life in a smart way: do not wait for the future to begin living. Fun is personal fulfillment, and every person gets to define what that means.
+      </p>
+      <div class="hero-actions" aria-label="Page sections">
+        <a class="button button-primary" href="#motto">Decode the motto</a>
+        <a class="button button-secondary" href="#motion">Play the signal</a>
+      </div>
+      <div class="tie-dye-ribbon" aria-hidden="true"></div>
+    </div>
+
+    <dl class="hero-hud" aria-label="Life is for Fun metrics">
+      <div>
+        <dt>Mode</dt>
+        <dd>Curious</dd>
+      </div>
+      <div>
+        <dt>Constraint</dt>
+        <dd>Joy</dd>
+      </div>
+      <div>
+        <dt>Output</dt>
+        <dd>Stories</dd>
+      </div>
+    </dl>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>An innovator, creator, and curious mind. I build things, think deeply, explore new ideas, and believe life should be meaningful — and fun.</p>
-    <p><strong>LIFF:</strong> Of course, I have a company with this name!</p>
-    <p>To me, "Life is for Fun" means not waiting for some distant future to be happy. It means exploiting what’s possible today — and using almost every day to do something that brings you joy, meaning, or connection. It’s not about escaping life, it’s about living it with intention and creativity.</p>
-    <div class="about-images-row">
-      <img src="images/20241207_142444.jpg" alt="In Antelope canyon" class="about-rotated-img">
-      <img src="images/20250309_103504.jpg" alt="Jjumping in NYC">
-      <img src="images/20241208_164716.jpg" alt="Hhiking in the grand canyon">
+  <main>
+    <section class="section section-light" id="motto">
+      <div class="section-inner split-layout">
+        <div class="lede-block">
+          <p class="section-kicker">motto.001</p>
+          <h2>Use your life intelligently. Do not wait for someday.</h2>
+          <p>
+            “Life is for Fun” is my reminder that time is the most valuable material we have. Use it deliberately. Build, explore, love, learn, move, create, and choose experiences that make life feel truly yours.
+          </p>
+          <p>
+            It is not shallow fun. It is fulfillment. For one person that may mean adventure. For another, family, art, science, music, business, friendship, quiet, faith, or service. The point is to stop outsourcing joy to the future.
+          </p>
+        </div>
+
+        <article class="signal-panel" aria-label="Life is for Fun motto breakdown">
+          <div class="console-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+            <strong>LIFF_CORE</strong>
+          </div>
+          <ul class="motto-list">
+            <li>
+              <span>Life</span>
+              <p>The raw material: your limited time, attention, energy, relationships, ideas, and body.</p>
+            </li>
+            <li>
+              <span>Is</span>
+              <p>The urgency: not later, not after success, not when everything is perfect. Now.</p>
+            </li>
+            <li>
+              <span>For</span>
+              <p>The intention: spend life on purpose, like a smart designer of your own days.</p>
+            </li>
+            <li>
+              <span>Fun</span>
+              <p>The compass: personal fulfillment, defined by you, colored by your own tie-dye pattern.</p>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="system">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="section-kicker">operating model</p>
+          <h2>The smart-fun stack</h2>
+        </div>
+
+        <div class="principle-grid">
+          <article class="principle-card">
+            <span>01</span>
+            <h3>Use time on purpose</h3>
+            <p>Treat a day like a design problem. Put attention where it creates energy, meaning, growth, or connection.</p>
+          </article>
+          <article class="principle-card">
+            <span>02</span>
+            <h3>Start before later</h3>
+            <p>The future is not a waiting room. Make a small version of the life you want while today is still available.</p>
+          </article>
+          <article class="principle-card">
+            <span>03</span>
+            <h3>Define your own fun</h3>
+            <p>Fulfillment is personal. Your fun can be loud, calm, ambitious, spiritual, technical, social, or beautifully strange.</p>
+          </article>
+          <article class="principle-card">
+            <span>04</span>
+            <h3>Keep it tie-dye</h3>
+            <p>Many colors, one life. Tie-dye is the reminder that identity, creativity, and joy do not need to be uniform.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-media" id="motion">
+      <div class="section-inner media-layout">
+        <div class="media-copy">
+          <p class="section-kicker">motion.002</p>
+          <h2>The motto has a soundtrack.</h2>
+          <p>
+            LIFF is also a creative signal: music, video, experiments, and the company name behind the phrase. The point is simple: turn fulfillment into something visible, shareable, and alive.
+          </p>
+          <div class="terminal-note" aria-label="Life is for Fun boot sequence">
+            <p><span>&gt;</span> spend time like it matters</p>
+            <p><span>&gt;</span> define fun for yourself</p>
+            <p><span>&gt;</span> make today less postponed</p>
+          </div>
+        </div>
+
+        <div class="video-shell">
+          <div class="video-topline">
+            <span id="video-label">Now playing: Creation Life is For Fun</span>
+            <span>loop: enabled</span>
+          </div>
+          <video id="liff-video" muted controls playsinline preload="metadata" poster="images/20240310_112533.jpg">
+            <source src="Music_Video_Creation_Life_is_For_Fun -2 .mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="field-log">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="section-kicker">field.log</p>
+          <h2>Evidence from the real world</h2>
+        </div>
+
+        <div class="photo-grid">
+          <figure class="photo-card photo-card-large">
+            <img src="images/20250309_103504.jpg" alt="Jumping above New York City">
+            <figcaption>
+              <span>NYC</span>
+              <strong>Joy can be architectural.</strong>
+            </figcaption>
+          </figure>
+          <figure class="photo-card photo-card-antelope">
+            <img src="images/20241207_142444.jpg" alt="Inside Antelope Canyon">
+            <figcaption>
+              <span>Antelope Canyon</span>
+              <strong>Change the angle.</strong>
+            </figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="images/20241208_164716.jpg" alt="At the Grand Canyon">
+            <figcaption>
+              <span>Grand Canyon</span>
+              <strong>Let scale recalibrate you.</strong>
+            </figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="images/20250415_122052.jpg" alt="Kayaking in the Algarve">
+            <figcaption>
+              <span>Algarve</span>
+              <strong>Find the waterline.</strong>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img src="images/20250415_122052.jpg" alt="Life is for Fun founder in Algarve">
+      <p>© <span id="year"></span> Life is for Fun. Built for curiosity, motion, and joy.</p>
     </div>
-  </section>
-
-  <footer>
-    <img src="images/20250415_122052.jpg" alt="In Algarve" style="width:120px;height:120px;border-radius:50%;box-shadow:0 2px 8px #0002;display:block;margin:0 auto 1rem auto;">
-    <p>© <span id="year"></span> Life is for Fun. All rights reserved.</p>
   </footer>
+
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    window.addEventListener('load', () => {
-      const video = document.querySelector('video');
-      setTimeout(() => {
-        if (video) {
-          video.muted = true; // Ensure the video is muted for autoplay
-          video.play().catch(error => console.error('Autoplay failed:', error));
-        }
-      }, 1000); // Delay autoplay by 1 second
-      const playlist = [
-      "Music_Video_LIFF_to_Life_is_For_Fun.mp4",
-      "Music_Video_Creation_Life_is_For_Fun -2 .mp4"
-      ];
+    const video = document.getElementById("liff-video");
+    const videoLabel = document.getElementById("video-label");
+    const playlist = [
+      {
+        label: "Creation Life is For Fun",
+        src: "Music_Video_Creation_Life_is_For_Fun -2 .mp4"
+      },
+      {
+        label: "LIFF to Life is For Fun",
+        src: "Music_Video_LIFF_to_Life_is_For_Fun.mp4"
+      }
+    ];
+    let videoIndex = 0;
 
-      let index = 0;
+    if (video) {
+      window.addEventListener("load", () => {
+        video.muted = true;
+        video.play().catch(() => {});
+      });
 
       video.addEventListener("ended", () => {
-        index = index++ % playlist.length;
-        video.src = playlist[index];
+        videoIndex = (videoIndex + 1) % playlist.length;
+        video.src = playlist[videoIndex].src;
+        videoLabel.textContent = `Now playing: ${playlist[videoIndex].label}`;
         video.load();
-        video.play();
+        video.play().catch(() => {});
       });
-    });
+    }
+
+    const canvas = document.getElementById("signal-canvas");
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (canvas) {
+      const ctx = canvas.getContext("2d");
+      let nodes = [];
+      let width = 0;
+      let height = 0;
+      let frame = 0;
+
+      function resizeSignal() {
+        const rect = canvas.getBoundingClientRect();
+        const ratio = Math.min(window.devicePixelRatio || 1, 2);
+        width = rect.width;
+        height = rect.height;
+        canvas.width = width * ratio;
+        canvas.height = height * ratio;
+        ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+        nodes = Array.from({ length: Math.max(16, Math.floor(width / 70)) }, (_, index) => ({
+          x: (index / Math.max(1, Math.floor(width / 70))) * width + Math.random() * 48,
+          y: Math.random() * height,
+          speed: 0.15 + Math.random() * 0.28,
+          phase: Math.random() * Math.PI * 2
+        }));
+      }
+
+      function drawSignal() {
+        ctx.clearRect(0, 0, width, height);
+        ctx.lineWidth = 1;
+
+        nodes.forEach((node, index) => {
+          if (!prefersReducedMotion) {
+            node.y += node.speed;
+            node.x += Math.sin(frame * 0.012 + node.phase) * 0.12;
+            if (node.y > height + 24) {
+              node.y = -24;
+              node.x = Math.random() * width;
+            }
+          }
+
+          const next = nodes[(index + 3) % nodes.length];
+          const distance = Math.hypot(node.x - next.x, node.y - next.y);
+          if (distance < 260) {
+            ctx.strokeStyle = "rgba(63, 241, 223, 0.16)";
+            ctx.beginPath();
+            ctx.moveTo(node.x, node.y);
+            ctx.lineTo(next.x, next.y);
+            ctx.stroke();
+          }
+
+          ctx.fillStyle = index % 3 === 0 ? "rgba(169, 255, 79, 0.42)" : "rgba(255, 176, 0, 0.35)";
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, index % 3 === 0 ? 2.1 : 1.4, 0, Math.PI * 2);
+          ctx.fill();
+        });
+
+        frame += 1;
+        if (!prefersReducedMotion) {
+          requestAnimationFrame(drawSignal);
+        }
+      }
+
+      resizeSignal();
+      drawSignal();
+      window.addEventListener("resize", resizeSignal);
+    }
   </script>
 </body>
 </html>
