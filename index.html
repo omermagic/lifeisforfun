@@ -23,7 +23,7 @@
       <div class="nav-links">
         <a href="#motto">Motto</a>
         <a href="#system">System</a>
-        <a href="#motion">Motion</a>
+        <a href="#motion" data-signal-trigger>Motion</a>
         <a href="#field-log">Fun Map</a>
         <a href="#method">Method</a>
       </div>
@@ -37,7 +37,7 @@
       </p>
       <div class="hero-actions" aria-label="Page sections">
         <a class="button button-primary" href="#motto">Decode the motto</a>
-        <a class="button button-secondary" href="#motion">Play the signal</a>
+        <a class="button button-secondary" id="play-signal" href="#motion" data-signal-trigger>Play the signal</a>
       </div>
       <div class="tie-dye-ribbon" aria-hidden="true"></div>
       <p class="hero-reflection">
@@ -307,6 +307,7 @@
 
     const video = document.getElementById("liff-video");
     const videoLabel = document.getElementById("video-label");
+    const signalTriggers = document.querySelectorAll("[data-signal-trigger]");
     const playlist = [
       {
         label: "Creation Life is For Fun",
@@ -318,6 +319,7 @@
       }
     ];
     let videoIndex = 0;
+    let signalAudioEnabled = false;
 
     if (video) {
       window.addEventListener("load", () => {
@@ -325,9 +327,28 @@
         video.play().catch(() => {});
       });
 
+      const playSignalFromStart = () => {
+        signalAudioEnabled = true;
+        video.muted = false;
+        video.volume = 1;
+        try {
+          video.currentTime = 0;
+        } catch {}
+        video.play().catch(() => {});
+      };
+
+      signalTriggers.forEach((trigger) => {
+        trigger.addEventListener("click", (event) => {
+          event.preventDefault();
+          document.getElementById("motion")?.scrollIntoView({ behavior: "smooth", block: "start" });
+          playSignalFromStart();
+        });
+      });
+
       video.addEventListener("ended", () => {
         videoIndex = (videoIndex + 1) % playlist.length;
         video.src = playlist[videoIndex].src;
+        video.muted = !signalAudioEnabled;
         videoLabel.textContent = `Now playing: ${playlist[videoIndex].label}`;
         video.load();
         video.play().catch(() => {});
