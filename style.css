@@ -1033,8 +1033,10 @@ canvas {
   }
 
   .hero-reflection {
-    max-width: 21rem;
-    font-size: 0.92rem;
+    max-width: 18.5rem;
+    font-size: 0.78rem;
+    font-weight: 650;
+    line-height: 1.35;
   }
 
   .hero-hud {
