@@ -858,33 +858,84 @@ canvas {
     var(--ink);
   background-size: 100% 0.32rem, 96px 96px, 112px 112px, auto, auto, auto;
   background-repeat: no-repeat, repeat, repeat, no-repeat, no-repeat, repeat;
-  padding: clamp(4rem, 8vw, 7rem) 1rem;
-  text-align: center;
+  padding: clamp(4.25rem, 8vw, 7rem) 1rem;
+  text-align: left;
+}
+
+.closing-note::after {
+  content: "";
+  position: absolute;
+  inset: -45%;
+  background: url("images/20241207_142444.jpg") center / cover no-repeat;
+  filter: contrast(1.08) saturate(1.25);
+  opacity: 0.14;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  transform: rotate(90deg) scale(1.08);
+  transform-origin: center;
 }
 
 .closing-note-inner {
-  width: min(100%, 980px);
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1040px);
   margin: 0 auto;
+  padding-left: clamp(1.25rem, 3vw, 2.25rem);
 }
 
-.closing-note p {
+.closing-note-inner::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  bottom: 0.35rem;
+  width: 0.32rem;
+  border-radius: 999px;
+  background: var(--tie-dye);
+  box-shadow: 0 0 28px rgba(169, 255, 79, 0.18);
+}
+
+.closing-note-kicker {
+  margin: 0;
+  max-width: 920px;
+  color: var(--text);
+  font-size: clamp(2.4rem, 5.1vw, 5rem);
+  font-weight: 950;
+  letter-spacing: 0;
+  line-height: 0.98;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.22),
+    0 -1px 0 rgba(0, 0, 0, 0.78),
+    0 10px 30px rgba(0, 0, 0, 0.38);
+}
+
+.closing-note-lede {
+  max-width: 780px;
+  margin: 1.2rem 0 0;
+  color: var(--acid);
+  font-size: clamp(1.18rem, 2vw, 1.65rem);
+  font-weight: 820;
+  line-height: 1.25;
+}
+
+.closing-note-body {
+  display: grid;
+  gap: 0.95rem;
+  max-width: 880px;
+  margin-top: clamp(1.6rem, 3vw, 2.3rem);
+}
+
+.closing-note-body p {
   margin: 0;
   color: rgba(246, 250, 239, 0.72);
-  font-size: 1.45rem;
-  font-weight: 750;
-  letter-spacing: 0;
+  font-size: clamp(1rem, 1.45vw, 1.22rem);
+  font-weight: 620;
+  line-height: 1.6;
 }
 
-.closing-note p + p {
-  margin-top: 0.55rem;
+.closing-note-body p:last-child {
   color: var(--text);
-  font-size: 3.35rem;
-  font-weight: 950;
-  line-height: 1;
-  text-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.28),
-    0 -1px 0 rgba(0, 0, 0, 0.76),
-    0 8px 24px rgba(0, 0, 0, 0.42);
+  font-weight: 760;
 }
 
 .site-footer {
@@ -1132,12 +1183,25 @@ canvas {
     text-align: left;
   }
 
-  .closing-note p {
-    font-size: 1.05rem;
+  .closing-note {
+    padding: 3.6rem 1rem;
   }
 
-  .closing-note p + p {
-    font-size: 2.3rem;
+  .closing-note-inner {
+    padding-left: 1rem;
+  }
+
+  .closing-note-kicker {
+    font-size: 2.25rem;
+  }
+
+  .closing-note-lede {
+    font-size: 1.15rem;
+  }
+
+  .closing-note-body p {
+    font-size: 1rem;
+    line-height: 1.55;
   }
 
   .footer-inner a {
